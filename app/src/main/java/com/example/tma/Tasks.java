@@ -19,18 +19,20 @@ public class Tasks {
     // Empty constructor required for Firestore
     public Tasks() {}
 
-    public Tasks(String id, String taskName) {
+    public Tasks(String id, String taskName, String dueDate, boolean completed) {
         this.id = id;
         this.taskName = taskName;
-//        this.dueDate = dueDate;
-//        this.completed = completed;
+        this.dueDate = dueDate;
+        this.completed = completed;
 
     }
 
     public String getId() { return id; }
-
-
     public String getTaskName() { return taskName; }
-//    public boolean isCompleted() { return completed; }
-//    public void setCompleted(boolean completed) { this.completed = completed; }
+    public String getDueDate() { return dueDate; }
+    public boolean isCompleted() { return completed; }
+
+    public void setCompleted(boolean completed) { this.completed = completed; }
+    public void setDueDate(String dueDate) { this.dueDate = dueDate; }
+
 }
